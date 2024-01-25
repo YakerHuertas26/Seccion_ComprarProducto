@@ -1,0 +1,124 @@
+@use '../variables.scss';
+.producto{
+    &__calificacion{
+        display: flex;
+        gap: 2px;
+        margin-bottom: 20px;
+    }
+    &__estrella{
+        width: 12px;
+        height: 10px;
+        color: #049aef;
+    }
+    &__titulo{
+        font-size: 3rem;
+        font-weight:900;
+        margin-bottom: 10px;
+    }
+    &__descripcion{
+        color: variables.$color-muted;
+    }
+    &__titulo-detalle{
+        margin-top: 24px;
+        font-size: 1.5rem;
+    }
+    &__monto{
+        margin-top: 8px;
+        font-size: 3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+    
+    &__titulo-color{
+        display: flex;
+        gap: 10px;
+    }
+    &__color{
+        margin-top: 22px;
+        font-size: 1.8rem;
+        color: variables.$color-muted;
+    }
+    &__radio{
+        display: flex;
+        gap: 10px;
+        margin-top: 8px;
+    }
+    &__list-radio{
+        display: none;
+        &:checked + p{
+            border: solid 2px variables.$color-muted;
+        }
+    }
+    &__radio-color{
+        border: transparent;
+        cursor: pointer;
+        position: relative;
+        height: 34px;
+        width: 34px;
+        border-radius: 50%;
+        
+        &::after{
+            content: '';
+            background-color: #049aef;
+            height: 26px;
+            width: 26px;
+            position: absolute;
+            border-radius: 50%;
+            bottom: calc(50% - 13px);
+            left: calc(50% - 13px);
+        }
+        &--gris::after{
+            background-color: #adaeaf; 
+        }
+        &--rojo::after{
+            background-color: #f56a67; 
+        }
+    }
+    &__radio-talla{
+        cursor: pointer;
+        padding: 5px;
+        width:40px;
+        background-color:variables.$color-fondo;
+        border-radius: 5px;
+        text-align: center;
+    }
+    &__content-cantidad{
+        margin-top: 8px;
+        display: flex;
+        gap: 5px;
+    }
+    &__btn-cantidad{
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background-color:variables.$color-fondo ;
+        cursor: pointer;
+    }
+    &__input-cantidad{
+        text-align: center;
+        width: 20%;
+        border: none;
+        font-family: variables.$font-family;
+        &:focus{
+            outline:none;
+        }
+    }
+    &__btn-comprar{
+        margin-top: 20px;
+        background-color: #000;
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 700;
+        padding: 15px 40px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s ease all;
+        &:hover{
+            background-color: variables.$color-btn-hover;
+        }
+    }
+    
+    
+}
+
+

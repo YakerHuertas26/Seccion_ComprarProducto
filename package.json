@@ -1,0 +1,17 @@
+{
+  "type":"module",
+  "description": "",
+  "name": "seccion_compras",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"rollup --watch --config",
+    "sass":"sass --watch --style=compressed sass/index.scss public/build.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^4.9.6"
+  }
+}

@@ -7,10 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/general.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/ruta.css">
-    <link rel="stylesheet" href="./css/producto.css">
+    <link rel="stylesheet" href="./public/build.css">
+    <script src="./public/bundle.js" defer></script>
 </head>
 <body>
     <div class="comprarProducto">
@@ -58,17 +56,177 @@
             
             <div class="producto" id="producto">
                 <div class="producto__coleccion">
-                    <img class="producto__img producto__img--active" src="./img/celeste/1.jpg" alt="">
-                    <img class="producto__img" src="./img/celeste/2.jpg" alt="">
+                    <img class="producto__img producto__img--active" id="img1" src="./img/celeste/1.jpg" alt="">
+                    <img class="producto__img"  id="img2" src="./img/celeste/2.jpg" alt="">
                 </div>
                 <div class="producto__principal">
                     <img class="producto__ImgPrincipal" src="./img/celeste/1.jpg" alt="">
                 </div>
-                <div class="producto__información">
-                    <div class="producto_calificacion">
+                <div class="producto__contenedor-info">
+                    <div class="producto__calificacion">
+                        <div class="producto__estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                            </svg>
+                        </div>
+                        <div class="producto__estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                            </svg>
+                        </div>
+                        <div class="producto__estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                            </svg>
+                        </div>
+                        <div class="producto__estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                            </svg>
+                        </div>
+                        <div class="producto__estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                            </svg>
+                        </div>
+                        <div class="producto__estrella">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="producto__detalle">
+                        <h2 class="producto__titulo">Polo All Basic Hombre</h2>
+                        <p class="producto__descripcion">Lorem ipsum dolor sit amet.</p>
+                    </div>
+                    <div class="producto__detalle-precio">
+                        <p class="producto__titulo-detalle">Precio</p>
+                        <p class="producto__monto">S/19.99</p>
+                    </div>
+                    <div class="producto__detalle-color">
+                        <div class="producto__titulo-color">
+                            <p class="producto__titulo-detalle">Color: </p>
+                            <p class="producto__color">Celeste</p>
+                        </div>
+                        <div class="producto__radio">
+                            <label for="celeste">
+                                <input type="radio" 
+                                name="color" 
+                                id="celeste"
+                                class="producto__list-radio"
+                                value="celeste"
+                                checked
+                                >
+                                <p class="producto__radio-color
+                                producto__radio-color--celeste"
+                                ></p>
+                            </label>
+                            <label for="gris">
+                                <input type="radio" 
+                                name="color" 
+                                id="gris"
+                                class="producto__list-radio"
+                                value="gris"
+                                >
+                                <p class="producto__radio-color
+                                producto__radio-color--gris"
+                                ></p>
+                            </label>
+                            <label for="rojo">
+                                <input type="radio" 
+                                name="color" 
+                                id="rojo"
+                                class="producto__list-radio"
+                                value="rojo"
+                                >
+                                <p class="producto__radio-color
+                                producto__radio-color--rojo"
+                                ></p>
+                            </label>
+                        </div>
                         
                     </div>
+                    <div class="producto__detalle-talla">
+                        <p class="producto__titulo-detalle">Talla</p>
+                        <div class="producto__radio">
+                            <label for="s">
+                                <input type="radio" 
+                                name="talla" 
+                                id="s"
+                                class="producto__list-radio"
+                                value="s"
+                                checked
+                                >
+                                <p class="producto__radio-talla"
+                                >S</p>
+                            </label>
+                            <label for="m">
+                                <input type="radio" 
+                                name="talla" 
+                                id="m"
+                                class="producto__list-radio"
+                                value="m"
+                                >
+                                <p class="producto__radio-talla"
+                                >M</p>
+                            </label>
+                            <label for="l">
+                                <input type="radio" 
+                                name="talla" 
+                                id="l"
+                                class="producto__list-radio"
+                                value="l"
+                                >
+                                <p class="producto__radio-talla"
+                                >L</p>
+                            </label>
+                            <label for="xl">
+                                <input type="radio" 
+                                name="talla" 
+                                id="xl"
+                                class="producto__list-radio"
+                                value="xl"
+                                >
+                                <p class="producto__radio-talla"
+                                >XL</p>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="producto__cantidad">
+                        <p class="producto__titulo-detalle">Cantidad </p>
+                        <div class="producto__content-cantidad">
+                            <button class="producto__btn-cantidad" data-accion="aumentar">
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                            >
+                                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
+                            </svg>
+                            </button>
+                            <input type="text" class="producto__input-cantidad" name="cantidad" id="cantidad" value="1" readonly>
+                            <button class="producto__btn-cantidad" data-accion="disminuir">
+                                <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                                />
+                            </svg>
+                            </button>
+                        </div>
+                        <button class="producto__btn-comprar">Agregar al carrito</button>  
+                    </div>
                 </div>
+            </div>
+            <div class="referencias">
+                referencias
             </div>
         </main>
     </div>

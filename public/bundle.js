@@ -7,42 +7,42 @@ var datos = {
         celeste:[
             {
                 id:1,
-                color:"celeste",
-                precio:19.90,
+                color:"Celeste",
+                precio:"19.90",
                 ruta: "./img/celeste/1.jpg"
             },
             {
                 id:2,
-                color:"celeste",
-                precio:19.90,
+                color:"Celeste",
+                precio:"19.90",
                 ruta: "./img/celeste/2.jpg"
             }
         ],
         gris:[
             {
                 id:1,
-                color:"gris",
-                precio:19.90,
+                color:"Gris",
+                precio:"19.90",
                 ruta: "./img/gris/1.jpg"
             },
             {
                 id:2,
-                color:"gris",
-                precio:19.90,
+                color:"Gris",
+                precio:"19.90",
                 ruta: "./img/gris/2.jpg"
             }
         ],
         rojo:[
             {
                 id:1,
-                color:"rojo",
-                precio:19.90,
+                color:"Rojo",
+                precio:"19.90",
                 ruta: "./img/rojo/1.jpg"
             },
             {
                 id:2,
-                color:"rojo",
-                precio:19.90,
+                color:"Rojo",
+                precio:"19.90",
                 ruta: "./img/rojo/2.jpg"
             }
         ]
@@ -50,36 +50,56 @@ var datos = {
     }
 };
 
-const{celeste,gris,rojo}=datos.polo;
-
-
 const producto = document.getElementById('producto');
-const color= producto.querySelector('.producto__radio');
-const imgPrincipal= producto.querySelector('.producto__ImgPrincipal');
-const img1= producto.querySelector('#img1');
-const img2= producto.querySelector('#img2');
-color.addEventListener('click',(e)=>{
+const color = producto.querySelector('.producto__radio');
+const imgPrincipal = producto.querySelector('.producto__ImgPrincipal');
+const img1 = producto.querySelector('#img1');
+const img2 = producto.querySelector('#img2');
+const precio = producto.querySelector('.producto__monto');
+const datoColor = producto.querySelector('.producto__color');
+const collage= producto.querySelector('.producto__coleccion');
+
+
+const cambiarColor = (nuevoColor) => {
+    const colorData = datos.polo[nuevoColor];
+    
+    if (colorData) {
+        imgPrincipal.setAttribute('src', colorData[0].ruta);
+        img1.setAttribute('src', colorData[0].ruta);
+        img2.setAttribute('src', colorData[1].ruta);
+        datoColor.innerText = colorData[0].color;
+        precio.innerText = `S/${colorData[0].precio}` ;
+        img1.classList.add('producto__img--active');
+        img2.classList.remove('producto__img--active');
+    }
+    
+};
+
+color.addEventListener('click', (e) => {
     if (e.target.closest('input')) {
-        let color= e.target.closest('input').value;
+        let opcionColor = e.target.closest('input').value;
+        cambiarColor(opcionColor);
+    }
+});
 
 
-        if (color=='celeste') {
-            imgPrincipal.setAttribute('src',celeste[0].ruta);
-            img1.setAttribute('src',celeste[0].ruta);
-            img2.setAttribute('src',celeste[1].ruta);
+collage.addEventListener('click',(e)=>{
+    
+    if (e.target.closest('img')) {
+        let id = parseInt(e.target.closest('img').dataset.id); 
+        let ruta = e.target.closest('img').src;
+        
+        
+        if (id===0) {
+            imgPrincipal.setAttribute('src', ruta);
+            img1.classList.add('producto__img--active');
+            img2.classList.remove('producto__img--active');
         }
-        else if (color=='gris') {
-            imgPrincipal.setAttribute('src',gris[0].ruta);
-            img1.setAttribute('src',gris[0].ruta);
-            img2.setAttribute('src',gris[1].ruta);
+        if (id===1) {
+            imgPrincipal.setAttribute('src', ruta);
+            img2.classList.add('producto__img--active');
+            img1.classList.remove('producto__img--active');
         }
-        else if (color=='rojo') {
-            imgPrincipal.setAttribute('src',rojo[0].ruta);
-            img1.setAttribute('src',rojo[0].ruta);
-            img2.setAttribute('src',rojo[1].ruta);
-            
         }
         
-    }
-
 });

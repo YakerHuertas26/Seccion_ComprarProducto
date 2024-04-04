@@ -1,0 +1,39 @@
+@use './../variables.scss';
+.tabs{
+    margin-top: 40px;
+    margin-bottom: 24px;
+    display: flex;
+    gap: 12px;
+    &__button{
+        height: 36px;
+        background-color:#e4e4e4;
+        border-radius: 3px;
+        font-size: 1.6rem;
+        color: #000;
+        padding: 10px 20px;
+        text-align: center;
+        font-family: variables.$font-family;
+        cursor: pointer;
+        &--activo{
+            background-color: #000;
+            color: #fff;
+        }
+    }
+}
+
+.tab{
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: variables.$shadow;
+    &__titulo{
+        font-size: 2.4rem;
+        padding-left: 18px;
+        padding-bottom: 20px;
+    }
+    &__lista{
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+}

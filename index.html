@@ -56,8 +56,8 @@
             
             <div class="producto" id="producto">
                 <div class="producto__coleccion">
-                    <img class="producto__img producto__img--active" id="img1" src="./img/celeste/1.jpg" alt="">
-                    <img class="producto__img"  id="img2" src="./img/celeste/2.jpg" alt="">
+                    <img class="producto__img producto__img--active" id="img1" src="./img/celeste/1.jpg" alt="" data-id="0">
+                    <img class="producto__img"  id="img2" src="./img/celeste/2.jpg" alt="" data-id="1">
                 </div>
                 <div class="producto__principal">
                     <img class="producto__ImgPrincipal" src="./img/celeste/1.jpg" alt="">
@@ -101,7 +101,7 @@
                     </div>
                     <div class="producto__detalle-precio">
                         <p class="producto__titulo-detalle">Precio</p>
-                        <p class="producto__monto">S/19.99</p>
+                        <p class="producto__monto">S/19.90</p>
                     </div>
                     <div class="producto__detalle-color">
                         <div class="producto__titulo-color">
@@ -225,8 +225,29 @@
                     </div>
                 </div>
             </div>
-            <div class="referencias">
-                referencias
+            <div class="mas-informacion">
+                <div class="tabs">
+                    <button class="tabs__button tabs__button--activo" data-tab="caracteristicas">Caracteristicas</button>
+                    <button class="tabs__button" data-tab="Reseña">Reseña</button>
+                    <button class="tabs__button" data-tab="Envio">Envio</button>
+                </div>
+
+                <div class="tab tab--active" id="caracteristicas">
+                    <h3 class="tab__titulo">Caracteristicas</h3>
+                    <ul class="tab__lista">
+                        <li>Nunc ornare ex at diam fermentum scelerisque.</li>
+                        <li>Integer vehicula nisl in sem faucibus, ac tincidunt magna dapibus.</li>
+                        <li>Integer vel magna eget ipsum laoreet lobortis.</li>
+                        <li>Phasellus viverra dui ut lorem tempus eleifend.</li>
+                        <li>Maecenas dictum lacus et condimentum aliquam.</li>
+                    </ul>
+                </div>
+
+                <div class="tab" id="reaseñas">
+                    <h3 class="tab__titulo">Reseña</h3>
+                    <p>soy una sereña</p>
+                </div>
+                
             </div>
         </main>
     </div>

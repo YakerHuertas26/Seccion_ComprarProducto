@@ -35,5 +35,38 @@
         flex-direction: column;
         gap: 4px;
     }
+};
 
+.reseña{
+    display: flex;
+    margin-bottom: 30px;
+    gap: 20px;
+    &__foto {
+		border-radius: 50px;
+		vertical-align: top;
+		height: 65px;
+		width: 65px;
+	}
+    &__estrellas {
+		display: flex;
+		gap: 10px;
+		color: #049aef;
+		margin-bottom: 10px;
+	}
+    &__estrella {
+		width: 10px;
+		height: 10px;
+	}
+    &__estrella svg {
+		width: 100%;
+		height: 100%;
+	}
+    &__fecha {
+		color: variables.$color-muted;
+		font-size: 12px;
+		margin-bottom: 10px;
+	}
+    &__texto {
+		line-height: 24px;
+	}
 }

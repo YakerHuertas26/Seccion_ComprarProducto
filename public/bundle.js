@@ -58,6 +58,7 @@ const img2 = producto.querySelector('#img2');
 const precio = producto.querySelector('.producto__monto');
 const datoColor = producto.querySelector('.producto__color');
 const collage= producto.querySelector('.producto__coleccion');
+const cantidad= producto.querySelector('.producto__content-cantidad');
 
 
 const cambiarColor = (nuevoColor) => {
@@ -102,4 +103,52 @@ collage.addEventListener('click',(e)=>{
         }
         }
         
+});
+// ++++ AUMNETAR Y DISMINURI CANTIDADES ++
+
+// retorno la acción del btn 
+const numero= cantidad.querySelector('#cantidad');
+const btnAccion= (e)=>{
+    let accion=e.target.closest('button').dataset.accion;
+    return accion
+};
+
+// ejecuto la mi función 
+cantidad.addEventListener('click',(e)=>{
+    const accion= btnAccion(e);
+    if (accion==='aumentar') {
+        numero.value= parseInt(numero.value)+1;
+    }
+    else if (accion==='disminuir') {
+        if (parseInt(numero.value)>1) {
+            numero.value= parseInt(numero.value)-1;
+        }
+        
+    }
+});
+
+const carrito= document.getElementById('carrito');
+const abrirCarrito= document.querySelectorAll('[data-accion="abrir-carrito"]');
+const cerrarCarrito= document.querySelectorAll('[data-accion="cerrar-carrito"]');
+// abrir carrito con una funcition
+const desplegarCarrito =()=>{
+    carrito.classList.add('carrito--active');
+};
+// Abrir el carrito para cada uno 
+abrirCarrito.forEach((element)=>{
+    element.addEventListener('click', (e)=>{
+        e.preventDefault();
+        desplegarCarrito();
+    });
+});
+
+// cerrar carrito
+const ocultarCarrito= ()=>{
+    carrito.classList.remove('carrito--active');
+};
+
+cerrarCarrito.forEach((element) => {
+    element.addEventListener('click',(e)=>{
+        ocultarCarrito();
+    });
 });

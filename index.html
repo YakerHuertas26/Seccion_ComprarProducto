@@ -195,7 +195,7 @@
                     <div class="producto__cantidad">
                         <p class="producto__titulo-detalle">Cantidad </p>
                         <div class="producto__content-cantidad">
-                            <button class="producto__btn-cantidad" data-accion="aumentar">
+                            <button class="producto__btn-cantidad" data-accion="disminuir">
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -206,8 +206,8 @@
                                 <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z" />
                             </svg>
                             </button>
-                            <input type="text" class="producto__input-cantidad" name="cantidad" id="cantidad" value="1" readonly>
-                            <button class="producto__btn-cantidad" data-accion="disminuir">
+                            <input type="text" class="producto__input-cantidad" name="cantidad" id="cantidad" value="1" readonly >
+                            <button class="producto__btn-cantidad" data-accion="aumentar">
                                 <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="16"
@@ -221,7 +221,7 @@
                             </svg>
                             </button>
                         </div>
-                        <button class="producto__btn-comprar">Agregar al carrito</button>  
+                        <button type="submit" class="producto__btn-comprar">Agregar al carrito</button>  
                     </div>
                 </div>
             </div>
@@ -244,12 +244,231 @@
                 </div>
 
                 <div class="tab" id="reaseñas">
-                    <h3 class="tab__titulo">Reseña</h3>
-                    <p>soy una sereña</p>
+                    <h3 class="tab__titulo">Reseñas</h3>
+                    <div class="reseña">
+                        <img src="./img/users/1.jpg" class="reseña__foto" alt="" />
+                        <div class="reseña__info">
+                            <div class="reseña__estrellas">
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="reseña__fecha">31 de Mayo de 2022</p>
+                            <p class="reseña__texto">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sed nunc dapibus,
+                                fringilla felis nec, consequat ipsum. Maecenas aliquam metus neque, a lobortis justo
+                                suscipit eu. Quisque sit amet orci at tortor fermentum suscipit bibendum in libero.
+                                Duis rhoncus massa blandit nunc gravida, at euismod augue congue.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="reseña">
+                        <img src="./img/users/2.jpg" alt="" class="reseña__foto" />
+                        <div class="reseña__info">
+                            <div class="reseña__estrellas">
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="reseña__fecha">31 de Mayo de 2022</p>
+                            <p class="reseña__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>
+                    <div class="reseña">
+                        <img src="./img/users/3.jpg" alt="" class="reseña__foto" />
+                        <div class="reseña__info">
+                            <div class="reseña__estrellas">
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                                <div class="reseña__estrella">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
+                                        />
+                                    </svg>
+                                </div>
+                            </div>
+                            <p class="reseña__fecha">31 de Mayo de 2022</p>
+                            <p class="reseña__texto">
+                                Integer vel nisi massa. Pellentesque ligula nulla, pretium hendrerit massa quis,
+                                tempus consequat lectus. Nulla facilisi. Etiam ipsum felis, euismod eget volutpat
+                                tristique, consequat at lorem.
+                            </p>
+                        </div>
                 </div>
-                
             </div>
         </main>
     </div>
+
+    <div class="notificacion" id="notificacion">
+        <p class="notificacion__titulo">Agregado al carrito</p>
+        <img src="./img/celeste/1.jpg" alt="" class="notificacion__thumb" />
+        <a href="#" class="notificacion__link" data-accion="abrir-carrito">Ver carrito</a>
+    </div>
+
+    <!-- ++++ CARRITO ++++ -->
+    <div class="carrito" id="carrito">
+        <div class="carrito__overlay">
+            <div class="carrito__contenedor">
+                <div class="carrito__header">
+                    <h4 class="carrito__titulo">Carrito</h4>
+                    <button class="carrito__btn-cerrar" data-accion="cerrar-carrito">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"
+                            />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="carrito__body">
+                    <p class="carrito__aviso-sin-productos">No hay productos en tu carrito</p>
+                    <!-- <div class="carrito__producto">
+                        <div class="carrito__producto-info">
+                            <img src="./img/celeste/1.jpg" alt="" class="carrito__thumb"  />
+                            <div>
+                                <p class="carrito__producto-nombre">
+                                    <span class="carrito__producto-cantidad">1 x </span>
+                                    Lorem Ipsum Dolot Asimmet
+                                </p>
+                                <p class="carrito__producto-propiedades">
+                                    tamaño:<span>S</span> Color: <span> Celeste</span> 
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carrito__producto-contenedor-precio">
+                            <button class="carrito__btn-eliminar-item" data-accion="eliminar-item-carrito">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="16"
+                                    height="16"
+                                    fill="currentColor"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"
+                                    />
+                                </svg>
+                            </button>
+                            <p class="carrito__producto-precio">S/19.90</p>
+                        </div>
+                    </div> -->
+                </div>
+
+                <div class="carrito__footer">
+                    <div class="carrito__contenedor-total">
+                        <div>
+                            <p class="carrito__label">Total:</p>
+                            <p class="carrito__total">S/00.00</p>
+                        </div>
+                        <button class="carrito__btn-comprar" id="carrito__btn-comprar">Comprar</button>
+                    </div>
+                    <div class="carrito__contenedor-btn-regresar" data-accion="cerrar-carrito">
+                        <button class="carrito__btn-regresar">Regresar a la tienda</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
 </body>
 </html>

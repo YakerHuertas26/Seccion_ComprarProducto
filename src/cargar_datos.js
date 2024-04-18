@@ -24,6 +24,7 @@ const cambiarColor = (nuevoColor) => {
         precio.innerText = `S/${colorData[0].precio}` ;
         img1.classList.add('producto__img--active')
         img2.classList.remove('producto__img--active')
+        
     }
     
 };

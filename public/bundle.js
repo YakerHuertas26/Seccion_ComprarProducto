@@ -133,6 +133,8 @@ const abrirCarrito= document.querySelectorAll('[data-accion="abrir-carrito"]');
 const cerrarCarrito= document.querySelectorAll('[data-accion="cerrar-carrito"]');
 const producto= document.getElementById('producto');
 const agregarProducto= producto.querySelector('.producto__btn-comprar');
+const notificacion=document.getElementById('notificacion');
+
 let productosSeleccionados= [];
 const darFormato= new Intl.NumberFormat('es-PE',{style: 'currency',currency:'PEN'});
 let total=0;
@@ -204,7 +206,7 @@ const desplegarCarrito =()=>{
 
             // 6.- inseto el new element
             ubicacion.appendChild(newElement);
-
+            
         });
     }
     carrito.querySelector('.carrito__total').innerText= darFormato.format((total).toFixed(2));
@@ -272,8 +274,15 @@ agregarProducto.addEventListener('click',(e) =>{
         
     });
     }
-    
-    
+
+    // abrir notificación del carrito 
+    notificacion.classList.add('notificacion--active');
+    setTimeout(()=>{
+        notificacion.classList.remove('notificacion--active');
+    },2000);
+    // reemplazar la ruta de img
+    let ruta= (document.querySelector('.producto__ImgPrincipal')).src;
+    notificacion.querySelector('.notificacion__thumb').src=ruta;
     
 });
 

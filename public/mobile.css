@@ -1,0 +1,63 @@
+.comprarProducto{
+    display: block;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-bottom: 20px;
+}
+.producto{
+    display: grid;
+    
+    grid-template-areas: 
+    "coleccion "
+    "principal "
+    "principal "
+    "info   "
+    ;
+}
+.producto__coleccion{
+    grid-area: coleccion;
+    display: flex;
+    flex-direction: row;
+
+    min-width: 300px;
+    width: 90%;
+    gap: 5px;
+    padding: 0px;
+}
+.producto__img {
+    width: 60px;
+
+}
+
+.producto__principal{
+    grid-area: principal;
+    height: 400px;
+    width: 300px;
+}
+.producto__contenedor-info{
+    grid-area: info;
+    width: 300px;
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+.producto__titulo{
+    font-size: 2.2rem;
+}
+.producto__descripcion{
+    font-size: 1.4rem;
+}
+.producto__monto{
+    font-size: 2.2rem;
+}
+.producto__titulo-detalle{
+    font-size: 1.4rem;
+}
+.reseña__texto{
+    font-size: 1.2rem;
+    width: 220px;
+
+}
